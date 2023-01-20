@@ -9,5 +9,5 @@ As suggested, I installed the <a href="https://chocolatey.org/install">Chocolate
 Then, to test my applications, I installed the <a href="https://developer.android.com/studio">Android Studio</a> and setup a device.
 I had no idea, but all this work would be for nothing, because the course uses Expo to test the apps. I just started this one after setup my enviroment because I was moving, and would gave no network connection for a few days, and the little bit experience I had with React Native before tath required an emulator to run the applications. But, whatever...
 
-Next, I configured the enviroment variables, adding 
+Next, I configured the enviroment variables, adding <code>ANDROID_HOME<\code>
 </p>
