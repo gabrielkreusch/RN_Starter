@@ -6,6 +6,7 @@ In this repo I'm registering my progress on React Native course, to remember and
 * [Setup Enviroment](#setup-enviroment)
 * [Getting Started](#getting-started)
 * [Working with Content](#working-with-content)
+* [List Building](#list-building)
 
 ## Setup Enviroment
 <p align='justify'>
@@ -30,4 +31,63 @@ In third part, we're create a stylesheet to style our component. And, in the las
 </div>
 <p align='justify'>
 Next, I did the <a href='https://github.com/gabrielkreusch/RN_Starter/releases/tag/1.2.1'>JSX overview exercise</a>.
+</p>
+
+## List Building
+<p align='justify'>
+Well, we're always gonna start off with some array of records, be it numbers, string, objects, or anything else we want to list on the screen. At this point, to turn an array into a series of React components, we're going to use FlatList, another one of those primitive elements from React Native.
+  
+To turns an array into a list elements with FlatList element we are required to pass in prop 'data' the array of data we wants to display. Also required to pass in a 'renderItem' prop a function that will turn each individual item into an element; just like this:
+</p>
+
+```jsx
+  const friends = [ { name: 'Friend #1'}, ... ];
+  
+  return (
+    <FlatList
+      data={friends}
+      renderItem={(element) => {
+        // element === { item: { name: 'Friend #1' }, index: 0 }
+      }}
+    />
+  );
+```
+<p align='justify'>
+Notice, the "element" argument is not the same that a list item, it have a couple of different different properties in it. If we want only the array's item we need to make use of ES 2015 destructuring. So rather than code above, we could write like this:
+</p>
+
+```jsx
+  return (
+    <FlatList
+      data={friends}
+      renderItem={({ item }) => {
+        // item === { name: 'Friend #1' }
+      }}
+    />
+  );
+```
+<p align='justify'>
+In order, the instructor said that I should see a warning after ran the app because I needed especify a key to each element; well, it's not occurred. I believe this could have been fixed in some release between the one used by the instructor and mine. To test this I changed the 'keyExtractor' prop to a empty function, like below,  and... yes, I got the warning. So I really think that it's doesn't matter and want to test more later on.
+</p>
+
+```jsx
+    const friends = [
+        { name: 'Friend #1', key: '1' },
+        { name: 'Friend #2', key: '2' },
+        { name: 'Friend #3', key: '3' },
+        ...
+    ];
+
+    return (
+        <FlatList
+            keyExtractor={() => {}}
+            data={friends}
+            renderItem={({ item }) => {
+                return <Text>{item.name}</Text>
+            }}
+        />
+    );
+```
+<p align='justify'>
+But, for now, I'm just following as suggested by the instructor.
 </p>
