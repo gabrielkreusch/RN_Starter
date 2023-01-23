@@ -67,7 +67,7 @@ Notice, the "element" argument is not the same that a list item, it have a coupl
   );
 ```
 <p align='justify'>
-In order, the instructor said that I should see a warning after ran the app because I needed especify a key to each element; well, it's not occurred. I believe this could have been fixed in some release between the one used by the instructor and mine. To test this I changed the 'keyExtractor' prop to a empty function, like below,  and... yes, I got the warning.
+In order, the instructor said that I should see a warning, after ran the app, saying that it's necessary to provide a unique key to each element, otherwise, the React Native'll reload all the list every single update in the origin array; and, to avoid this, I should either explicitly specify these keys for each element or define a function in the 'keyExtractor' prop to do so. Well, it's not occurred. I believe this could have been fixed in some release between the one used by the instructor and mine. A default 'keyExtractor' function, for example. To test this I changed the 'keyExtractor' prop to a empty function, like below,  and... yes, I got the warning.
 </p>
 
 ```jsx
@@ -89,5 +89,7 @@ In order, the instructor said that I should see a warning after ran the app beca
     );
 ```
 <p align='justify'>
-So I really think that it's doesn't matter and want to test more later on, but, for now, I'm just following as suggested by the instructor.
+So I really think that it's not necessary to provide these keys, but, for now, I'm just following as suggested by the instructor.
+  
+The instructor also introduced two more props: the 'horizontal' to make a horizontal scroll on our FlatList; and 'showsHorizontalScrollIndicator' that allows to hide the scrollbar. And then asked for a little <a href='https://github.com/gabrielkreusch/RN_Starter/releases/tag/1.3.1'>exercise</a> about listing.
 </p>
