@@ -67,14 +67,14 @@ Notice, the "element" argument is not the same that a list item, it have a coupl
   );
 ```
 <p align='justify'>
-In order, the instructor said that I should see a warning after ran the app because I needed especify a key to each element; well, it's not occurred. I believe this could have been fixed in some release between the one used by the instructor and mine. To test this I changed the 'keyExtractor' prop to a empty function, like below,  and... yes, I got the warning. So I really think that it's doesn't matter and want to test more later on.
+In order, the instructor said that I should see a warning after ran the app because I needed especify a key to each element; well, it's not occurred. I believe this could have been fixed in some release between the one used by the instructor and mine. To test this I changed the 'keyExtractor' prop to a empty function, like below,  and... yes, I got the warning.
 </p>
 
 ```jsx
     const friends = [
-        { name: 'Friend #1', key: '1' },
-        { name: 'Friend #2', key: '2' },
-        { name: 'Friend #3', key: '3' },
+        { name: 'Friend #1' },
+        { name: 'Friend #2' },
+        { name: 'Friend #3' },
         ...
     ];
 
@@ -89,5 +89,5 @@ In order, the instructor said that I should see a warning after ran the app beca
     );
 ```
 <p align='justify'>
-But, for now, I'm just following as suggested by the instructor.
+So I really think that it's doesn't matter and want to test more later on, but, for now, I'm just following as suggested by the instructor.
 </p>
