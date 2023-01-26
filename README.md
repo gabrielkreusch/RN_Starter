@@ -93,3 +93,11 @@ So I really think that it's not necessary to provide these keys, but, for now, I
   
 The instructor also introduced two more props: the 'horizontal' to make a horizontal scroll on our FlatList; and 'showsHorizontalScrollIndicator' that allows to hide the scrollbar. And then asked for a little <a href='https://github.com/gabrielkreusch/RN_Starter/releases/tag/1.3.1'>exercise</a> about listing.
 </p>
+
+## Navigating Users Between Screens
+<p align='justify'>
+Until then, to show the screens we had created, we changed 'initialRouteName' in StackNavigator. From here we will use buttons. Well, React Native buttons are not as simple as I expected. The RN's primitive element 'Button' is very simple and have a very simple customization features; however, there is another element that we have access to to make a button, it's called 'TouchableOpacity'.
+</p>
+<div align='center'>
+  <img src='./diagrams/react-native-buttons.png' />
+</div>
