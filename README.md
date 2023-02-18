@@ -96,8 +96,42 @@ The instructor also introduced two more props: the 'horizontal' to make a horizo
 
 ## Navigating Users Between Screens
 <p align='justify'>
-Until then, to show the screens we had created, we changed 'initialRouteName' in StackNavigator. From here we will use buttons. Well, React Native buttons are not as simple as I expected. The RN's primitive element 'Button' is very simple and have a very simple customization features; however, there is another element that we have access to to make a button, it's called 'TouchableOpacity'.
+Until then, to show the screens we had created, we changed 'initialRouteName' in StackNavigator. From here we will use buttons. Well, React Native buttons are not as simple as I expected. The RN's primitive element 'Button' is very simple and have a very simple customization features; however, there is another element that we have access to make a button, it's called 'TouchableOpacity'.
 </p>
 <div align='center'>
   <img src='./diagrams/react-native-buttons.png' />
 </div>
+<p align='justify'>
+The 'Button' works as a self-closing element, so it works differently than I used to. To give a text, we use a 'title' prop; and to perform some code we should to use 'onPress' prop as the following example:
+</p>
+
+```jsx
+const HomeScreen = () => {
+  return (
+    <View>
+      <Text style={styles.text}>Hi there!</Text>
+      <Button
+        title="This is a 'Button' element"
+        onPress={() => console.log('Button pressed.')}
+      />
+    </View>
+  );
+};
+```
+<p align='justify'>
+The 'TouchableOpacity' element, if I understood correctly, works similar than a 'a' HTML tag. Everything we put inside listens the click and performs an action. To give it a text is similar than I usualy do, as simple as write it inside the tag limits; and to perform something, we shold use 'onPress' prop as well.
+</p>
+
+```jsx
+const HomeScreen = () => {
+  return (
+    <View>
+      <TouchableOpacity
+        onPress={() => console.log('List pressed.')}
+      >
+        <Text>This is a 'TouchableOpacity' element</Text>
+      </TouchableOpacity>
+    </View>
+  );
+};
+```
